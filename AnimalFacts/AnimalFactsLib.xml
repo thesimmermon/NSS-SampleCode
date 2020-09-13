@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AnimalFactsLib</name>
+    </assembly>
+    <members>
+        <member name="T:SampleCode.Source">
+             <summary>Values that represent sources.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="F:SampleCode.Source.User">
+            <summary>An enum constant representing the user option.</summary>
+        </member>
+        <member name="F:SampleCode.Source.Api">
+            <summary>An enum constant representing the API option.</summary>
+        </member>
+        <member name="T:SampleCode.AnimalFact">
+             <summary>An animal fact.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="P:SampleCode.AnimalFact.Id">
+             <summary>Gets or sets the identifier.</summary>
+            
+             <value>The identifier.</value>
+        </member>
+        <member name="P:SampleCode.AnimalFact.Version">
+             <summary>Gets or sets the version.</summary>
+            
+             <value>The version.</value>
+        </member>
+        <member name="P:SampleCode.AnimalFact.UserId">
+             <summary>Gets or sets the identifier of the user.</summary>
+            
+             <value>The identifier of the user.</value>
+        </member>
+        <member name="P:SampleCode.AnimalFact.Text">
+             <summary>Gets or sets the text.</summary>
+            
+             <value>The text.</value>
+        </member>
+        <member name="P:SampleCode.AnimalFact.UpdatedTimestamp">
+             <summary>Gets or sets the Date/Time of the updated timestamp.</summary>
+            
+             <value>The updated timestamp.</value>
+        </member>
+        <member name="P:SampleCode.AnimalFact.CreatedTimestamp">
+             <summary>Gets or sets the send date.</summary>
+            
+             <value>The send date.</value>
+        </member>
+        <member name="P:SampleCode.AnimalFact.IsDeleted">
+             <summary>Gets or sets a value indicating whether this object is deleted.</summary>
+            
+             <value>True if this object is deleted, false if not.</value>
+        </member>
+        <member name="P:SampleCode.AnimalFact.Source">
+             <summary>Gets or sets the source for the.</summary>
+            
+             <value>The source.</value>
+        </member>
+        <member name="P:SampleCode.AnimalFact.Used">
+             <summary>Gets or sets a value indicating whether the used.</summary>
+            
+             <value>True if used, false if not.</value>
+        </member>
+        <member name="P:SampleCode.AnimalFact.Type">
+             <summary>Gets or sets the type.</summary>
+            
+             <value>The type.</value>
+        </member>
+        <member name="T:SampleCode.AnimalFacts">
+             <summary>An animal facts.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <seealso cref="T:SampleCode.IAnimalFacts"/>
+        </member>
+        <member name="F:SampleCode.AnimalFacts.jsonOptions">
+            <summary>Options for controlling the JSON.</summary>
+        </member>
+        <member name="F:SampleCode.AnimalFacts.httpClient">
+            <summary>The HTTP client.</summary>
+        </member>
+        <member name="F:SampleCode.AnimalFacts.disposedValue">
+            <summary>True to disposed value.</summary>
+        </member>
+        <member name="M:SampleCode.AnimalFacts.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:SampleCode.AnimalFacts"/> class.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.AnimalFacts.#ctor(System.Net.Http.HttpClient)">
+             <summary>
+             Initializes a new instance of the <see cref="T:SampleCode.AnimalFacts"/> class.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="httpClient">The HTTP client.</param>
+        </member>
+        <member name="M:SampleCode.AnimalFacts.GetRandomFactsAsync(System.String,System.Nullable{System.Int32})">
+             <summary>Gets random facts.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="animal">(Optional) The animal.</param>
+             <param name="amount">(Optional) Number of facts to return.</param>
+            
+             <returns>The random facts.</returns>
+            
+             <seealso cref="M:SampleCode.IAnimalFacts.GetRandomFactsAsync(System.String,System.Nullable{System.Int32})"/>
+        </member>
+        <member name="M:SampleCode.AnimalFacts.GetRandomFactAsync(System.String)">
+             <summary>Gets random fact.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="animal">(Optional) The animal.</param>
+            
+             <returns>The random fact.</returns>
+            
+             <seealso cref="M:SampleCode.IAnimalFacts.GetRandomFactAsync(System.String)"/>
+        </member>
+        <member name="M:SampleCode.AnimalFacts.Dispose">
+             <summary>Performs application-defined tasks associated with freeing, releasing, or resetting
+             unmanaged resources.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <seealso cref="M:System.IDisposable.Dispose"/>
+        </member>
+        <member name="M:SampleCode.AnimalFacts.Dispose(System.Boolean)">
+             <summary>Releases the unmanaged resources used by the NssLabs.AnimalFacts and optionally
+             releases the managed resources.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="disposing">    True to release both managed and unmanaged resources; false to
+                                         release only unmanaged resources.</param>
+        </member>
+        <member name="T:SampleCode.IAnimalFacts">
+             <summary>Interface for animal facts.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.IAnimalFacts.GetRandomFactsAsync(System.String,System.Nullable{System.Int32})">
+             <summary>Gets random facts.</summary>
+            
+             <param name="animal">(Optional) The animal.</param>
+             <param name="amount">(Optional) Number of facts to return.</param>
+            
+             <returns>The random facts.</returns>
+        </member>
+        <member name="M:SampleCode.IAnimalFacts.GetRandomFactAsync(System.String)">
+             <summary>Gets random fact.</summary>
+            
+             <param name="animal">(Optional) The animal.</param>
+            
+             <returns>The random fact.</returns>
+        </member>
+        <member name="T:SampleCode.Status">
+             <summary>A status.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="P:SampleCode.Status.Verified">
+             <summary>Gets or sets a value indicating whether the verified.</summary>
+            
+             <value>True if verified, false if not.</value>
+        </member>
+        <member name="P:SampleCode.Status.SentCount">
+             <summary>Gets or sets the number of sents.</summary>
+            
+             <value>The number of sents.</value>
+        </member>
+    </members>
+</doc>

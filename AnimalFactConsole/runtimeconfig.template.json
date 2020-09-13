@@ -1,0 +1,20 @@
+{
+  "configProperties": {
+    "seriLogFile": "c:\\files\\AnimalFactConsole.Seri.log",
+    "pollingConfigs": [
+      {
+        "animal": "cat",
+        "interval": 3
+      },
+      {
+        "animal": "dog",
+        "interval": 5
+      },
+      {
+        "animal": "horse",
+        "interval": 10,
+        "amount": 2
+      }
+    ]
+  }
+}

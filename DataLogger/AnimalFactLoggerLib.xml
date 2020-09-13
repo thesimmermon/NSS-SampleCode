@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AnimalFactLoggerLib</name>
+    </assembly>
+    <members>
+        <member name="T:SampleCode.ConsoleFactLogger">
+             <summary>A console fact logger.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <seealso cref="T:SampleCode.IAnimalFactLogger"/>
+        </member>
+        <member name="F:SampleCode.ConsoleFactLogger.Locker">
+            <summary>The locker for writing to the console.</summary>
+        </member>
+        <member name="M:SampleCode.ConsoleFactLogger.WriteAsync(System.DateTime,System.String,System.String)">
+             <summary>Writes an asynchronous.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="timestamp"> The timestamp Date/Time.</param>
+             <param name="animalType">Type of the animal.</param>
+             <param name="fact">      The fact.</param>
+            
+             <returns>void.</returns>
+        </member>
+        <member name="M:SampleCode.ConsoleFactLogger.WriteToConsole(System.String,System.ConsoleColor)">
+             <summary>
+                 Writes to console using a lock object to ensure the color doesn't get mangled.
+                 Might be better to queue this, in the future.
+             </summary>
+            
+             <remarks>Jim Simmermon, 9/13/2020.</remarks>
+            
+             <param name="msg">  The message.</param>
+             <param name="color">The color.</param>
+        </member>
+        <member name="T:SampleCode.FileFactLogger">
+             <summary>A file fact logger.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <seealso cref="T:SampleCode.IAnimalFactLogger"/>
+        </member>
+        <member name="F:SampleCode.FileFactLogger.filePath">
+            <summary>Full pathname of the file.</summary>
+        </member>
+        <member name="M:SampleCode.FileFactLogger.#ctor(System.String)">
+             <summary>
+             Initializes a new instance of the <see cref="T:SampleCode.FileFactLogger"/> class.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="filePath">Full pathname of the file.</param>
+        </member>
+        <member name="M:SampleCode.FileFactLogger.WriteAsync(System.DateTime,System.String,System.String)">
+             <summary>Writes an asynchronous.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="timestamp"> The timestamp Date/Time.</param>
+             <param name="animalType">Type of the animal.</param>
+             <param name="fact">      The fact.</param>
+            
+             <returns>An asynchronous result.</returns>
+        </member>
+        <member name="T:SampleCode.IAnimalFactLogger">
+             <summary>Interface for animal fact logger.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.IAnimalFactLogger.WriteAsync(System.DateTime,System.String,System.String)">
+             <summary>Writes an asynchronous.</summary>
+            
+             <param name="timestamp"> The timestamp Date/Time.</param>
+             <param name="animalType">Type of the animal.</param>
+             <param name="fact">      The fact.</param>
+            
+             <returns>void.</returns>
+        </member>
+        <member name="T:SampleCode.IPollingEngine">
+             <summary>Interface for polling engine.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.IPollingEngine.Start(SampleCode.PollingConfiguration)">
+             <summary>Starts the poller.</summary>
+            
+             <param name="config">The configuration.</param>
+        </member>
+        <member name="M:SampleCode.IPollingEngine.Stop">
+            <summary>Stops this object.</summary>
+        </member>
+        <member name="T:SampleCode.PollingConfiguration">
+             <summary>A polling configuration.</summary>
+            
+             <remarks>Jim Simmermon, 9/13/2020.</remarks>
+        </member>
+        <member name="P:SampleCode.PollingConfiguration.Animal">
+             <summary>Gets or sets the animal.</summary>
+            
+             <value>The animal.</value>
+        </member>
+        <member name="P:SampleCode.PollingConfiguration.Interval">
+             <summary>Gets or sets the interval.</summary>
+            
+             <value>The interval.</value>
+        </member>
+        <member name="P:SampleCode.PollingConfiguration.Amount">
+             <summary>Gets or sets the amount.</summary>
+            
+             <value>The amount.</value>
+        </member>
+        <member name="T:SampleCode.PollingEngine">
+             <summary>A polling engine.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <seealso cref="T:SampleCode.IPollingEngine"/>
+        </member>
+        <member name="F:SampleCode.PollingEngine.source">
+            <summary>Source for the cancellation.</summary>
+        </member>
+        <member name="F:SampleCode.PollingEngine.factLogger">
+            <summary>The fact logger.</summary>
+        </member>
+        <member name="F:SampleCode.PollingEngine.animalFacts">
+            <summary>The animal facts.</summary>
+        </member>
+        <member name="F:SampleCode.PollingEngine.disposedValue">
+            <summary>True to disposed value.</summary>
+        </member>
+        <member name="M:SampleCode.PollingEngine.#ctor(SampleCode.IAnimalFactLogger,SampleCode.IAnimalFacts)">
+             <summary>
+             Initializes a new instance of the <see cref="T:SampleCode.PollingEngine"/> class.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="factLogger"> The fact logger.</param>
+             <param name="animalFacts">The animal facts.</param>
+        </member>
+        <member name="M:SampleCode.PollingEngine.Start(SampleCode.PollingConfiguration)">
+             <summary>Starts.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="config">The configuration.</param>
+        </member>
+        <member name="M:SampleCode.PollingEngine.Stop">
+             <summary>Stops this object.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.PollingEngine.Dispose">
+             <summary>Performs application-defined tasks associated with freeing, releasing, or resetting
+             unmanaged resources.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <seealso cref="M:System.IDisposable.Dispose"/>
+        </member>
+        <member name="M:SampleCode.PollingEngine.Dispose(System.Boolean)">
+             <summary>Performs application-defined tasks associated with freeing, releasing, or resetting
+             unmanaged resources.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="disposing">    True to release both managed and unmanaged resources; false to
+                                         release only unmanaged resources.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AnimalFactLogger</name>
+    </assembly>
+    <members>
+        <member name="T:SampleCode.Program">
+             <summary>A program.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="P:SampleCode.Program.Container">
+             <summary>Gets or sets the container.</summary>
+            
+             <value>The container.</value>
+        </member>
+        <member name="M:SampleCode.Program.Main">
+             <summary>Main entry-point for this application.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.Program.DoPolling">
+             <summary>Executes the polling operation.</summary>
+            
+             <remarks>Jim Simmermon, 9/13/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.Program.WriteHeaderToConsole">
+             <summary>Writes the header to console.</summary>
+            
+             <remarks>Jim Simmermon, 9/13/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.Program.WriteErrorToConsole(System.Exception)">
+             <summary>Writes an error to console.</summary>
+            
+             <remarks>Jim Simmermon, 9/13/2020.</remarks>
+            
+             <param name="e">An Exception to process.</param>
+        </member>
+        <member name="M:SampleCode.Program.InitializeLogging">
+             <summary>Initializes the logging.</summary>
+            
+             <remarks>Jim Simmermon, 9/13/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.Program.BuildContainer">
+             <summary>Builds the container.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+    </members>
+</doc>

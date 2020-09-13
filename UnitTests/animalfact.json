@@ -1,0 +1,16 @@
+{
+  "used": false,
+  "source": "api",
+  "type": "dog",
+  "deleted": false,
+  "_id": "factId",
+  "user": "userId",
+  "text": "Test Text.",
+  "createdAt": "2020-01-01T01:01:01.001Z",
+  "updatedAt": "2020-01-01T01:01:01.001Z",
+  "__v": 1,
+  "status": {
+    "verified": true,
+    "sentCount": 1
+  }
+}

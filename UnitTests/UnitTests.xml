@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitTests</name>
+    </assembly>
+    <members>
+        <member name="T:SampleCode.UnitTests.AnimalFactsTests">
+             <summary>An animal facts tests.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="F:SampleCode.UnitTests.AnimalFactsTests.factText">
+            <summary>The fact text.</summary>
+        </member>
+        <member name="F:SampleCode.UnitTests.AnimalFactsTests.factListText">
+            <summary>The fact list text.</summary>
+        </member>
+        <member name="M:SampleCode.UnitTests.AnimalFactsTests.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:SampleCode.UnitTests.AnimalFactsTests"/> class.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.UnitTests.AnimalFactsTests.ShouldReturnSingleFactWithMock">
+             <summary>Should return single fact with mock.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.UnitTests.AnimalFactsTests.ShouldReturnFactListWithMock">
+             <summary>Should return fact list with mock.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.UnitTests.AnimalFactsTests.ShouldReturnSingleFactLive(System.String)">
+             <summary>Should return single fact live.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="animal">The animal.</param>
+        </member>
+        <member name="M:SampleCode.UnitTests.AnimalFactsTests.ShouldReturnFactListLive(System.String,System.Int32)">
+             <summary>Should return fact list live.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="animal">The animal.</param>
+             <param name="amount">The amount.</param>
+        </member>
+        <member name="M:SampleCode.UnitTests.AnimalFactsTests.GetMockHttpClient(Moq.Mock{System.Net.Http.HttpMessageHandler},System.String)">
+             <summary>Gets mock HTTP client.</summary>
+            
+             <remarks>Jim Simmermon, 9/12/2020.</remarks>
+            
+             <param name="handlerMock">The handler mock.</param>
+             <param name="jsonText">   The JSON text.</param>
+            
+             <returns>The mock HTTP client.</returns>
+        </member>
+        <member name="T:SampleCode.UnitTests.PollingEngineTests">
+             <summary>A polling engine tests.</summary>
+            
+             <remarks>Jim Simmermon, 9/13/2020.</remarks>
+        </member>
+        <member name="M:SampleCode.UnitTests.PollingEngineTests.TestPollingInterval">
+             <summary>Tests polling interval.</summary>
+            
+             <remarks>Jim Simmermon, 9/13/2020.</remarks>
+        </member>
+    </members>
+</doc>

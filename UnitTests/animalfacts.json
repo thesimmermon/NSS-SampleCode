@@ -1,0 +1,30 @@
+[
+  {
+    "used": false,
+    "source": "user",
+    "type": "cat",
+    "deleted": false,
+    "_id": "factId1",
+    "user": "userId1",
+    "text": "Test Text: 1.",
+    "createdAt": "2020-01-01T01:01:01.001Z",
+    "updatedAt": "2020-01-01T01:01:01.001Z",
+    "__v": 1,
+    "status": {
+      "verified": true,
+      "sentCount": 2
+    }
+  },
+  {
+    "used": false,
+    "source": "user",
+    "type": "horse",
+    "deleted": false,
+    "_id": "factId2",
+    "user": "userId2",
+    "text": "Test Text: 2.",
+    "createdAt": "2020-01-01T01:01:01.001Z",
+    "updatedAt": "2020-01-01T01:01:01.001Z",
+    "__v": 2
+  }
+]

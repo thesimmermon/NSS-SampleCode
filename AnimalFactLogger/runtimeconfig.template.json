@@ -1,0 +1,12 @@
+{
+  "configProperties": {
+    "SeriLogFile": "c:\\files\\AnimalFactLogger.Seri.log",
+    "FactLogFile": "C:\\files\\facts.txt",
+    "pollingConfigs": [
+      {
+        "animal": "cat",
+        "interval": 10
+      }
+    ]
+  }
+}
