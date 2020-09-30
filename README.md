@@ -2,10 +2,10 @@
 ## A simple application written in .NET Core 3.1 to access a RESTful API
 
 ## Table of Contents
-* [General Info] (#general-info)
-* [Technologies] (#technologies)
-* [Setup] (#setup)
-* [Future Development] (#future-development)
+* [General Info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Future Development](#future-development)
 
 ## General Info
 This application was the result of a coding exersize that I completed for a job interview.  Basically, the requirements were to create an application to connect to a backend RESTful API, gather data based on specified criteria, write the data to a log file or to the console.  
